@@ -29,7 +29,19 @@ git log &amp;ndash;oneline
  使用 git log --oneline 查看起来更友好一些，去掉了Author和Date。Commit ID也只是显示前7位，使得一行放一条记录。
 4.本地项目如何回到历史提交版本
  git reset &amp;ndash;hard commitId
- 这时就可以配合查看远程服务器上的历史提交记录的命令一起使用了。</description>
+ 这时就可以配合查看远程服务器上的历史提交记录的命令一起使用了。
+5.初始化本地仓库
+ git init
+ 6.本地代码加入本地仓库
+ git add .
+ 7.把本地修改提交本地版本库及备注
+ git commit -m &amp;ldquo;commitString&amp;rdquo;
+ 8.本地库与远程平台关联
+ git remote add origin targetUrl
+ 这个操作只需第一次push前操作一次即可。
+9.推送本地提交到远程平台命令
+ git push origin master
+ 提交到master分支。</description>
     </item>
     
     <item>

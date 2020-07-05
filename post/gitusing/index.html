@@ -107,6 +107,30 @@ git log &ndash;oneline</p>
 <p>git reset &ndash;hard commitId</p>
 </blockquote>
 <p>这时就可以配合查看远程服务器上的历史提交记录的命令一起使用了。</p>
+<p><em><strong>5.初始化本地仓库</strong></em></p>
+<blockquote>
+<p>git init</p>
+</blockquote>
+<p><em><strong>6.本地代码加入本地仓库</strong></em></p>
+<blockquote>
+<p>git add .</p>
+</blockquote>
+<p><em><strong>7.把本地修改提交本地版本库及备注</strong></em></p>
+<blockquote>
+<p>git commit -m &ldquo;commitString&rdquo;</p>
+</blockquote>
+<p><em><strong>8.本地库与远程平台关联</strong></em></p>
+<blockquote>
+<p>git remote add origin targetUrl</p>
+</blockquote>
+<p>这个操作只需第一次push前操作一次即可。</p>
+<p><em><strong>9.推送本地提交到远程平台命令</strong></em></p>
+<blockquote>
+<p>git push origin master</p>
+</blockquote>
+<p>提交到master分支。</p>
+<p><em><strong>10.第一次push时不成功，提示要pull等</strong></em></p>
+<p>不管它，直接用 <code>-f</code> 来push。</p>
 
 
   <footer>
