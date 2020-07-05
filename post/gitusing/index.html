@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Git使用 - 我就随便说说</title>
+    <meta property="og:title" content="Git使用 - 我就随便说说">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="记录一下常用的Git命令和操作流。
+1.最常用
+[&amp;hellip;] git clone targetUrl
+[&amp;hellip;] clone远程项目到本地。clone时会一并将项目最外层的文件夹一并拉下来，不用担心会散落一地。
+2.当前所在分支
+[&amp;hellip;] git branch
+[&amp;hellip;] 3.历史提交记录
+[&amp;hellip;] git log
+git log &amp;hellip;">
+      <meta property="og:description" content="记录一下常用的Git命令和操作流。
+1.最常用
+[&amp;hellip;] git clone targetUrl
+[&amp;hellip;] clone远程项目到本地。clone时会一并将项目最外层的文件夹一并拉下来，不用担心会散落一地。
+2.当前所在分支
+[&amp;hellip;] git branch
+[&amp;hellip;] 3.历史提交记录
+[&amp;hellip;] git log
+git log &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">我就随便说说</a></h1>
+
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Git使用</h1>
+
+<h3>
+  2020-07-05</h3>
+<hr>
+
+
+      </header>
+
+
+
+<p>记录一下常用的Git命令和操作流。</p>
+<p><em><strong>1.最常用</strong></em></p>
+<blockquote>
+<p>git clone targetUrl</p>
+</blockquote>
+<p>clone远程项目到本地。clone时会一并将项目最外层的文件夹一并拉下来，不用担心会散落一地。</p>
+<p><em><strong>2.当前所在分支</strong></em></p>
+<blockquote>
+<p>git branch</p>
+</blockquote>
+<p><em><strong>3.历史提交记录</strong></em></p>
+<blockquote>
+<p>git log<br>
+git log &ndash;oneline</p>
+</blockquote>
+<p>使用 <code>git log --oneline</code> 查看起来更友好一些，去掉了Author和Date。Commit ID也只是显示前7位，使得一行放一条记录。</p>
+<p><em><strong>4.本地项目如何回到历史提交版本</strong></em></p>
+<blockquote>
+<p>git reset &ndash;hard commitId</p>
+</blockquote>
+<p>这时就可以配合查看远程服务器上的历史提交记录的命令一起使用了。</p>
+
+
+  <footer>
+  
+  
+
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

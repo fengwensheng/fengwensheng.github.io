@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>我就随便说说</title>
+    <link>https://fengwensheng.github.io/</link>
+    <description>Recent content on 我就随便说说</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jul 2020 10:04:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://fengwensheng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git使用</title>
+      <link>https://fengwensheng.github.io/post/gitusing/</link>
+      <pubDate>Sun, 05 Jul 2020 10:04:10 +0800</pubDate>
+      
+      <guid>https://fengwensheng.github.io/post/gitusing/</guid>
+      <description>记录一下常用的Git命令和操作流。
+1.最常用
+ git clone targetUrl
+ clone远程项目到本地。clone时会一并将项目最外层的文件夹一并拉下来，不用担心会散落一地。
+2.当前所在分支
+ git branch
+ 3.历史提交记录
+ git log
+git log &amp;ndash;oneline
+ 使用 git log --oneline 查看起来更友好一些，去掉了Author和Date。Commit ID也只是显示前7位，使得一行放一条记录。
+4.本地项目如何回到历史提交版本
+ git reset &amp;ndash;hard commitId
+ 这时就可以配合查看远程服务器上的历史提交记录的命令一起使用了。</description>
+    </item>
+    
+    <item>
+      <title>Hugo小记</title>
+      <link>https://fengwensheng.github.io/post/hugoexp/</link>
+      <pubDate>Sat, 31 Aug 2019 11:26:24 +0800</pubDate>
+      
+      <guid>https://fengwensheng.github.io/post/hugoexp/</guid>
+      <description>近期想做一个个人博客，记录一些心得体会。本人素喜简约范，又要有点小GEEK。调研了一番。窍以为，静态博客构建工具HUGO配合Github托管尚可。
+1. 新建一个网站项目
+ hugo new site myHugoSite
+ 2. 选择主题
+ cd themes
+git clone https://github.com/yihui/hugo-ivy.git ivy
+ clone项目，放入新建的名为ivy的文件夹中，最好命名为与配置文件里设的一致，这样在后续启动本地服务器调试时，不用再去具体指定。
+3. 本地运行
+ hugo server -D
+ 同时也可以用参数t指定主题：hugo server -D -t ivy。运行该命令后，便可通过访问以下地址查看实现效果：localhost:1313。这里参数-D的意思是草稿文件即draft: true的也一并渲染。
+4. 生成静态网站
+ hugo
+ 执行前确保所有要发布的页面非草稿。执行后根目录下会生成一个public目录，用于保存生成的静态网站文件。可使用Github Page服务，将生成的静态网站托管在Github上。</description>
+    </item>
+    
+  </channel>
+</rss>
