@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>factory关键字 - 我就随便说说</title>
+    <meta property="og:title" content="factory关键字 - 我就随便说说">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="在Dart中提供factory关键字方便实现Singleton Pattern单例模式。单例模式确保该类在运行时只有一个实例存在，每次引用的是同一实例对象。
+Dart中Singleton实现的范式如下。
+1.私有命名构造器
+[&amp;hellip;] Singleton._internal(); 2.单例成员变量
+[&amp;hellip;] static final Singleton _singleton &amp;hellip;">
+      <meta property="og:description" content="在Dart中提供factory关键字方便实现Singleton Pattern单例模式。单例模式确保该类在运行时只有一个实例存在，每次引用的是同一实例对象。
+Dart中Singleton实现的范式如下。
+1.私有命名构造器
+[&amp;hellip;] Singleton._internal(); 2.单例成员变量
+[&amp;hellip;] static final Singleton _singleton &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">我就随便说说</a></h1>
+
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>factory关键字</h1>
+
+<h3>
+  2020-07-05</h3>
+<hr>
+
+
+      </header>
+
+
+
+<p>在Dart中提供factory关键字方便实现Singleton Pattern单例模式。单例模式确保该类在运行时只有一个实例存在，每次引用的是同一实例对象。<br>
+Dart中Singleton实现的范式如下。</p>
+<p><em><strong>1.私有命名构造器</strong></em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart">Singleton._internal();
+</code></pre></div><p><em><strong>2.单例成员变量</strong></em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Singleton _singleton <span style="color:#f92672">=</span> Singleton._internal();
+</code></pre></div><p><em><strong>3.工厂构造器</strong></em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">factory</span> Singleton() <span style="color:#f92672">=&gt;</span> _singleton;
+</code></pre></div><p>值得注意的是，<code>通常的构造器</code> 是创建一个新的实例对象，不需要用 <code>return</code> 。而 <code>factory构造器</code> 是为了得到一个应用级的单例，需要返回这个实例对象，故使用 <code>return</code>。可以这么说，factory构造器是一个引用其它构造器的构造器。</p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js//highlight.min.js"></script>
+
+
+
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

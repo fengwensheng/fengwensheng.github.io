@@ -6,10 +6,24 @@
     <description>Recent content in Posts on 我就随便说说</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2020 10:04:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2020 20:16:56 +0800</lastBuildDate>
     
 	<atom:link href="https://fengwensheng.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>factory关键字</title>
+      <link>https://fengwensheng.github.io/post/factoryindart/</link>
+      <pubDate>Sun, 05 Jul 2020 20:16:56 +0800</pubDate>
+      
+      <guid>https://fengwensheng.github.io/post/factoryindart/</guid>
+      <description>在Dart中提供factory关键字方便实现Singleton Pattern单例模式。单例模式确保该类在运行时只有一个实例存在，每次引用的是同一实例对象。
+Dart中Singleton实现的范式如下。
+1.私有命名构造器
+Singleton._internal(); 2.单例成员变量
+static final Singleton _singleton = Singleton._internal(); 3.工厂构造器
+factory Singleton() =&amp;gt; _singleton; 值得注意的是，通常的构造器 是创建一个新的实例对象，不需要用 return 。而 factory构造器 是为了得到一个应用级的单例，需要返回这个实例对象，故使用 return。可以这么说，factory构造器是一个引用其它构造器的构造器。</description>
+    </item>
     
     <item>
       <title>Git使用</title>
