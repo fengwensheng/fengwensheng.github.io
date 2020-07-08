@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Homebrew使用 - 我就随便说说</title>
+    <meta property="og:title" content="Homebrew使用 - 我就随便说说">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="Homebrew是Mac下非常好用的包管理工具。用于安装维护软件工具及各种编程环境。
+号称 The Missing Package Manager for macOS。
+1.搜索软件
+[&amp;hellip;] brew search softwareName
+[&amp;hellip;] 2.查看软件的信息、版本和依赖等
+[&amp;hellip;] brew info softwareName
+[&amp;hellip;] &amp;hellip;">
+      <meta property="og:description" content="Homebrew是Mac下非常好用的包管理工具。用于安装维护软件工具及各种编程环境。
+号称 The Missing Package Manager for macOS。
+1.搜索软件
+[&amp;hellip;] brew search softwareName
+[&amp;hellip;] 2.查看软件的信息、版本和依赖等
+[&amp;hellip;] brew info softwareName
+[&amp;hellip;] &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">我就随便说说</a></h1>
+
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Homebrew使用</h1>
+
+<h3>
+  2020-07-09</h3>
+<hr>
+
+
+      </header>
+
+
+
+<p>Homebrew是Mac下非常好用的包管理工具。用于安装维护软件工具及各种编程环境。<br>
+号称 <code>The Missing Package Manager for macOS</code>。</p>
+<p><em><strong>1.搜索软件</strong></em></p>
+<blockquote>
+<p>brew search softwareName</p>
+</blockquote>
+<p><em><strong>2.查看软件的信息、版本和依赖等</strong></em></p>
+<blockquote>
+<p>brew info softwareName</p>
+</blockquote>
+<p><em><strong>3.安装</strong></em></p>
+<blockquote>
+<p>brew install softwareName<br>
+brew cask install softwareName</p>
+</blockquote>
+<p>cask代表是有GUI的软件包。</p>
+<p><em><strong>4.更新Homebrew自己</strong></em></p>
+<blockquote>
+<p>brew update</p>
+</blockquote>
+<p><em><strong>5.哪些软件过时了可更新</strong></em></p>
+<blockquote>
+<p>brew outdated</p>
+</blockquote>
+<p><em><strong>6.更新全部软件</strong></em></p>
+<blockquote>
+<p>brew upgrade</p>
+</blockquote>
+<p><em><strong>7.更新某一特定软件</strong></em></p>
+<blockquote>
+<p>brew upgrade softwareName</p>
+</blockquote>
+<p><em><strong>8.清除所有旧版本缓存</strong></em></p>
+<blockquote>
+<p>brew cleanup</p>
+</blockquote>
+<p><em><strong>9.关于tap命令的使用</strong></em></p>
+<p><code>brew tap</code> 用于加入一个指定包的三方仓库源，主要是来自github。当一个工具在核心库找不到时，就可以使用tap来加入其在github上的第三方仓库。<br>
+用例。如mongodb的安装。<br>
+brew core lib移除了mongodb，但github上mongodb/homebrew-brew仓库下提供了mongodb的三方。</p>
+<blockquote>
+<p>brew tap &lt;github_user/repo&gt;<br>
+brew tap mongodb/brew</p>
+</blockquote>
+<p>github上mongo这个账号下的brew仓库。之后就会把这个仓库加入homebrew。</p>
+<blockquote>
+<p>brew install mongodb-community</p>
+</blockquote>
+<p><em><strong>10.查看通过tap安装了哪些扩展</strong></em></p>
+<blockquote>
+<p>brew tap</p>
+</blockquote>
+
+
+  <footer>
+  
+  
+
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
