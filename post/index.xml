@@ -32,7 +32,10 @@ Mac下不久前也有了，据说在Win下比较有名的抓包工具&amp;ndash;
 3.查看api返回的json数据
  rightClick -&amp;gt; Follow -&amp;gt; Http Stream
  最后在Wireshark上查看json数据还是不太方便，可通过一些 在线json查看网站 来进行显示处理。
-工作流：通过1，2步配置好Wireshark后，通过3来查看api返回，copy一份json数据。打开json网站查看数据结构和字段名称。打开在线自动生成dart实体类的网站生成实体类来使用。</description>
+工作流：通过1，2步配置好Wireshark后，通过3来查看api返回，copy一份json数据。打开json网站查看数据结构和字段名称。打开在线自动生成dart实体类的网站生成实体类来使用。
+可以保存一下过滤条件，这样就不用每次输入了，直接选择对应的过滤项即可。
+ filterEnterBar -&amp;gt; Manage Display Filters -&amp;gt; + name &amp;amp; filter exp
+ </description>
     </item>
     
     <item>
