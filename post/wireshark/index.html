@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Wireshark抓包 - 我就随便说说</title>
+    <meta property="og:title" content="Wireshark抓包 - 我就随便说说">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="在用Flutter开发App时，需要用到抓包工具。 并且不像Web应用开发：直接使用Chrome的调试工具即可，那么方便。故有必要探索一下。
+Mac下不久前也有了，据说在Win下比较有名的抓包工具&amp;ndash;Fiddler。
+但是，使用了一段时间后，我的心情十分复杂&amp;hellip;
+最终，决定祭出尘封已久的Wireshark。
+首先，在用Fiddler等时，还是比较麻烦的。第一，需要在Dio中配 &amp;hellip;">
+      <meta property="og:description" content="在用Flutter开发App时，需要用到抓包工具。 并且不像Web应用开发：直接使用Chrome的调试工具即可，那么方便。故有必要探索一下。
+Mac下不久前也有了，据说在Win下比较有名的抓包工具&amp;ndash;Fiddler。
+但是，使用了一段时间后，我的心情十分复杂&amp;hellip;
+最终，决定祭出尘封已久的Wireshark。
+首先，在用Fiddler等时，还是比较麻烦的。第一，需要在Dio中配 &amp;hellip;">
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">我就随便说说</a></h1>
+
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Wireshark抓包</h1>
+
+<h3>
+  2020-08-01</h3>
+<hr>
+
+
+      </header>
+
+
+
+<p>在用Flutter开发App时，需要用到抓包工具。 并且不像Web应用开发：直接使用Chrome的调试工具即可，那么方便。故有必要探索一下。</p>
+<p>Mac下不久前也有了，据说在Win下比较有名的抓包工具&ndash;Fiddler。</p>
+<p>但是，使用了一段时间后，我的心情十分复杂&hellip;</p>
+<p><img src="/img/getRidOfFiddler.png" alt="getRidOfFiddler"></p>
+<p>最终，决定祭出尘封已久的Wireshark。</p>
+<p>首先，在用Fiddler等时，还是比较麻烦的。第一，需要在Dio中配置代理的ip和端口号。第二，每次运行程序时都要确保打开了代理工具。</p>
+<p>转成Wireshark后，没了这么强的侵入性，选择好要监听的网卡后，想抓就抓。</p>
+<p><em><strong>1.选择网卡</strong></em></p>
+<blockquote>
+<p>Preferences -&gt; Caputures</p>
+</blockquote>
+<p><em><strong>2.过滤条件</strong></em></p>
+<p>通过设置过滤条件方便查看我们感兴趣的网络包。主要通过协议及IP来进行filter。</p>
+<blockquote>
+<p>http &amp;&amp; ip.addr==47.100.164.129</p>
+</blockquote>
+<p>listen协议为http且source或destination为47.100.164.129的包。</p>
+<p><img src="/img/filter.png" alt="filter"></p>
+<p><em><strong>3.查看api返回的json数据</strong></em></p>
+<blockquote>
+<p>rightClick -&gt; Follow -&gt; Http Stream</p>
+</blockquote>
+<p>最后在Wireshark上查看json数据还是不太方便，可通过一些 <a href="http://jsonviewer.stack.hu">在线json查看网站</a> 来进行显示处理。</p>
+<p>工作流：通过1，2步配置好Wireshark后，通过3来查看api返回，copy一份json数据。打开json网站查看数据结构和字段名称。打开<a href="https://app.quicktype.io">在线自动生成dart实体类的网站</a>生成实体类来使用。</p>
+
+
+  <footer>
+  
+  
+
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
